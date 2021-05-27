@@ -3,12 +3,80 @@
   --secondary-font: 'Raleway', sans-serif;
   --accent-color: #2196f3;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+img {
+  display: block;
+}
+
 .list {
   list-style: none;
 }
 .link {
   text-decoration: none;
 }
+
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navigation {
+  display: flex;
+  align-items: center;
+}
+.our-team {
+  background-color: #f5f4fa;
+}
+.our-team-title-list {
+  flex-basis: calc((100% - 120px) / 4);
+  margin-left: 30px;
+  margin-top: 30px;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.menu-contact-item:not(:last-child) {
+  margin-right: 50px;
+}
+.people-box {
+  padding-top: 30px;
+}
+.header {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.menu-list {
+  display: flex;
+  align-items: center;
+}
+.menu-item:not(:last-child) {
+  margin-right: 50px;
+}
+
 body {
   font-family: var(--main-font);
 }
@@ -21,6 +89,21 @@ body {
   letter-spacing: 0.06em;
   background-color: transparent;
   cursor: pointer;
+  position: absolute;
+  align-items: center;
+  text-align: center;
+  font-family: 'Roboto';
+  color: #ffffff;
+  width: 200px;
+  height: 50px;
+  left: 700px;
+  right: 700px;
+  top: 350px;
+  bottom: 200px;
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 4px;
 }
 .logo-spn {
   color: #2196f3;
@@ -47,11 +130,12 @@ body {
   line-height: 1.6;
   background-color: #f5f4fa;
   border-radius: 4px;
-
+  border: 1px solid #eeeeee;
   text-align: center;
   letter-spacing: 0.03em;
-
+  padding: 6px 22px;
   color: #212121;
+  cursor: pointer;
 }
 
 .about-hero-title {
@@ -61,6 +145,24 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #212121;
+  margin-bottom: 10px;
+}
+.hero-title {
+  color: #ffffff;
+  margin-bottom: 30px;
+  margin: 0 auto;
+  padding-top: auto;
+  padding-bottom: auto;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .about-title {
@@ -69,6 +171,9 @@ body {
   line-height: 1.16;
   letter-spacing: 0.03em;
   color: #212121;
+  margin-bottom: 50px;
+  padding-top: 94px;
+  text-align: center;
 }
 .our-team-title {
   font-weight: 500;
@@ -76,6 +181,18 @@ body {
   line-height: 1.18;
   letter-spacing: 0.03em;
   color: #212121;
+  margin-bottom: 10px;
+}
+.our-team-title-item {
+  display: flex;
+  text-align: center;
+}
+.about-img-list {
+  display: flex;
+  justify-content: space-between;
+}
+.hero-container {
+  padding-bottom: 94px;
 }
 .description-text {
   font-size: 16px;
@@ -88,10 +205,24 @@ body {
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
+  color: #ffffff;
 }
+
+.menu-address-link-contacts {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
 .menu-address-link:hover,
 .menu-address-link:focus {
   color: #2196f3;
+}
+.menu-address {
+  margin-top: 20px;
+  font-style: normal;
 }
 /* ============= END COMPONENTS ============ */
 
@@ -108,6 +239,14 @@ body {
   line-height: 1.1;
   letter-spacing: 0.03em;
   color: #212121;
+  margin-right: 93px;
+}
+.logo-spn-one {
+  color: #ffffff;
+}
+.logo-spn-one:hover,
+.logo-spn-one:focus {
+  color: #2196f3;
 }
 .menu-link {
   font-weight: 500;
@@ -148,11 +287,26 @@ body {
 
 /* =========== HERO ================= */
 
-.hero-title {
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  text-transform: uppercase;
+.hero-main {
+  width: 1600px;
+  height: 600px;
+  position: relative;
+
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero/hero-img.jpg);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
+}
+
+.about-main-list {
+  display: flex;
+  padding-left: 215px;
+  padding-right: 215px;
+  margin-top: 94px;
+}
+.hero {
+  text-align: center;
 }
 
 /* =========== END HERO =========== */
@@ -174,6 +328,20 @@ body {
 .menu-address-link:focus {
   color: #2196f3;
 }
+.filters {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.filters-item:not(:last-child) {
+  margin-right: 8px;
+}
+.portfolio-list-img {
+  margin-left: -30px;
+  margin-top: -30px;
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .portfolio-title {
   font-weight: 700;
@@ -189,4 +357,23 @@ body {
   letter-spacing: 0.03em;
   color: #757575;
 }
+.portfolio-list-item {
+  flex-basis: calc((100% - 90px) / 3);
+  margin-left: 30px;
+  margin-top: 30px;
+}
+.people-card {
+  padding-top: 20px;
+}
+.menu-address-list-item:not(:last-child) {
+  margin-bottom: 9px;
+}
 /* ============= END PORTFOLIO ============== */
+
+/* ============ FOOTER ============= */
+
+.footer {
+  background-color: #2f303a;
+  padding: 60px 0;
+  display: block;
+}

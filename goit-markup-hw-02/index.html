@@ -6,6 +6,9 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Мой бизнес</title>
    <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+      integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" /> 
    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="./css/style.css">
@@ -15,6 +18,7 @@
 <body>   
    <!-- HEADER -->
       <header class="header">
+         <div class="container header-container">
          <nav class="navigation">
             <a class="logo-link link" href="./index.html"><span class="logo-spn">Web</span>Studio</a>
             <ul class="menu-list">
@@ -30,7 +34,7 @@
             </ul>
          </nav>
 
-            <ul class="menu-contact">
+            <ul class="menu-contact header-container">
                <li class="menu-contact-item list">
                   <a class="mail-link link" href="mailto:info@devstudio.com">info@devstudio.com</a>
                </li>
@@ -38,6 +42,7 @@
                   <a class="tel-link link" href="tel:+380961111111">+38 096 111 11 11</a>
                </li>
             </ul>
+         </div>
          
       </header>
       
@@ -45,14 +50,18 @@
 
       <main>
          <section class="hero">
-            <div class="hero-main">
+            <div class="hero-main container">
                <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
              
                <button class="modal-btn" type="button">Заказать услугу</button> 
             </div>
          </section>
          <section class="about-main">
+            <div class="container">
+            
+         
             <h2 hidden>О нас</h2>
+            
             <ul class="about-main-list">
                <li class="about-main-list-item list">
             <h3 class="about-hero-title">Внимание к деталям</h3>
@@ -71,52 +80,72 @@
             <p class="description">Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
                </li>
             </ul>
+         
+         </div>
+         
+             
          </section>
       <section class="about-img">
+         <div class="container">
          <h2 class="about-title">Чем мы занимаемся</h2>
          <ul class="about-img-list list">
             <li class="about-img-item">
-               <img class="about-img-list-img" src="./images/about/about-img-1.jpg" alt="набирает текст на клавиатуре" width="370" height="294">
+               <img class="about-img-list-img" src="./images/about/about-img-3.jpg" alt="набирает текст на клавиатуре" width="370" height="294">
             </li>
             <li class="about-img-item">
-               <img class="about-img-list-img" src="./images/about/about-img-2.jpg" alt="смотрит в телефон и в ноутбук" width="370" height="294">
+               <img class="about-img-list-img" src="./images/about/about-img-1.jpg" alt="смотрит в телефон и в ноутбук" width="370" height="294">
             </li>
             <li class="about-img-item">
-               <img class="about-img-list-img" src="./images/about/about-img-3.jpg" alt="рисует на планшете" width="370" height="294">
+               <img class="about-img-list-img" src="./images/about/about-img-2.jpg" alt="рисует на планшете" width="370" height="294">
             </li>
          </ul>
+         </div>
       </section>
-   
-      <section class="our-team">
+
+   <!-- НАША КОМАНДА -->
+
+      <section class="our-team section">
+         <div class="container">
          <h2 class="about-title">Наша команда</h2>
-         <ul class="our-team-title">
+         <ul class="our-team-title-item">
             <li class="our-team-title-list list">
                <img class="our-team-list-img" src="./images/about/1.jpg" alt="Мужчина" width="270" height="260">
-               <h3 class="our-team-title">Игорь Демьяненко</h3>
-               <p class="description-text" lang="en">Product Designer</p>
+                  <div class="people-box">
+                  <h3 class="our-team-title">Игорь Демьяненко</h3>
+                  <p class="description-text" lang="en">Product Designer</p>
+                  </div>
             </li>
             <li class="our-team-title-list list">
                <img class="our-team-list-img" src="./images/about/2.jpg" alt="Женщина" width="270" height="260">
-               <h3 class="our-team-title">Ольга Репина</h3>
-               <p class="description-text" lang="en">Frontend Developer</p>
+                  <div class="people-box">
+                  <h3 class="our-team-title">Ольга Репина</h3>
+                  <p class="description-text" lang="en">Frontend Developer</p>
+                  </div>
             </li>
             <li class="our-team-title-list list">
                <img class="our-team-list-img" src="./images/about/3.jpg" alt="Мужчина" width="270" height="260">
-               <h3 class="our-team-title">Николай Тарасов</h3>
-               <p class="description-text" lang="en">Marketing</p>
+                  <div class="people-box">
+                  <h3 class="our-team-title">Николай Тарасов</h3>
+                  <p class="description-text" lang="en">Marketing</p>
+                  </div>
             </li>
             <li class="our-team-title-list list">
                <img class="our-team-list-img" src="./images/about/4.jpg" alt="Мужчина" width="270" height="260">
-               <h3 class="our-team-title">Михаил Ермаков</h3>
-               <p class="description-text" lang="en">UI Designer</p>
+                  <div class="people-box">
+                  <h3 class="our-team-title">Михаил Ермаков</h3>
+                  <p class="description-text" lang="en">UI Designer</p>
+                  </div>
             </li>
          </ul>
+         </div>
       </section>
+      
       </main>
       
       <!-- FOOTER -->
 
-      <footer>
+      <footer class="footer">
+         <div class="container">
          <a class="logo-link link" href="./index.html"><span class="logo-spn">Web</span><span class="logo-spn-one">Studio</span></a> 
          <address class="menu-address">
             <ul class="menu-address-list">
@@ -131,6 +160,7 @@
                </li>
             </ul>
          </address>
+      </div>
       </footer>
 
    </body>
