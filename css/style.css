@@ -41,6 +41,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  /*это хуйня полная*/
 }
 .navigation {
   display: flex;
@@ -49,25 +51,40 @@ img {
 .our-team {
   background-color: #f5f4fa;
 }
-.our-team-title-list {
-  flex-basis: calc((100% - 120px) / 4);
-  margin-left: 30px;
-  margin-top: 30px;
+.our-team-title-list:not(:last-child) {
+  margin-right: 30px;
 }
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
 }
 
+/*
+.menu-contact::after {
+  display: block;
+  content: '';
+  width: 60px;
+  height: 1px;
+  background-color: #303030;
+  flex-shrink: 0;
+  margin-right: 40px;
+  */
+
 .menu-contact-item:not(:last-child) {
   margin-right: 50px;
 }
 .people-box {
   padding-top: 30px;
+  padding-bottom: 30px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  background-color: #ffffff;
 }
 .header {
   padding-top: 25px;
   padding-bottom: 25px;
+  border-bottom: 1px solid #ececec;
 }
 .menu-list {
   display: flex;
@@ -89,21 +106,19 @@ body {
   letter-spacing: 0.06em;
   background-color: transparent;
   cursor: pointer;
-  position: absolute;
   align-items: center;
   text-align: center;
   font-family: 'Roboto';
   color: #ffffff;
-  width: 200px;
-  height: 50px;
-  left: 700px;
-  right: 700px;
-  top: 350px;
-  bottom: 200px;
   background: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: 4px;
+  margin-top: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 .logo-spn {
   color: #2196f3;
@@ -113,9 +128,16 @@ body {
   color: #ffffff;
 }
 */
+.element {
+  padding: 20px 24px;
+  border-left: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+}
+
 .modal-btn:hover,
 .modal-btn:focus {
-  color: #2196f3;
+  background-color: #2196f3;
 }
 .modal-btn-filters:hover,
 .modal-btn-filters:focus {
@@ -153,6 +175,8 @@ body {
   margin: 0 auto;
   padding-top: auto;
   padding-bottom: auto;
+  width: 696px;
+  height: 120px;
 
   font-family: 'Roboto';
   font-style: normal;
@@ -172,7 +196,6 @@ body {
   letter-spacing: 0.03em;
   color: #212121;
   margin-bottom: 50px;
-  padding-top: 94px;
   text-align: center;
 }
 .our-team-title {
@@ -189,8 +212,15 @@ body {
 }
 .about-img-list {
   display: flex;
-  justify-content: space-between;
 }
+.about-img {
+  padding-bottom: 94px;
+}
+
+.about-img-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .hero-container {
   padding-bottom: 94px;
 }
@@ -205,7 +235,7 @@ body {
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .menu-address-link-contacts {
@@ -288,25 +318,22 @@ body {
 /* =========== HERO ================= */
 
 .hero-main {
-  width: 1600px;
-  height: 600px;
-  position: relative;
+  text-align: center;
+  padding: 200px 0px;
+}
 
+.hero {
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/hero/hero-img.jpg);
   background-repeat: no-repeat;
   background-position: left top;
   background-size: cover;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .about-main-list {
   display: flex;
-  padding-left: 215px;
-  padding-right: 215px;
-  margin-top: 94px;
-}
-.hero {
-  text-align: center;
 }
 
 /* =========== END HERO =========== */
@@ -323,10 +350,17 @@ body {
 }
 /* =========== END ABOUT ============ */
 
+.about-main-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 /* =========== PORTFOLIO =========== */
 .filters-item-link:hover,
 .menu-address-link:focus {
   color: #2196f3;
+}
+.address {
+  color: #ffffff;
 }
 .filters {
   display: flex;
@@ -374,6 +408,7 @@ body {
 
 .footer {
   background-color: #2f303a;
-  padding: 60px 0;
+  padding: 60px;
   display: block;
+  margin: 0 auto;
 }
