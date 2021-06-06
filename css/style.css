@@ -414,8 +414,7 @@ body {
 .tel-link:focus {
   color: #2196f3;
 }
-.current:hover::before,
-.current:focus::before {
+.current::after {
   content: '';
   background-color: var(--accent-color);
   position: absolute;
