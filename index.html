@@ -58,7 +58,7 @@
          <section class="hero">
             <div class="hero-main container">
                <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-               <button class="modal-btn" type="button">Заказать услугу</button> 
+               <button class="modal-btn" type="button" data-modal-open>Заказать услугу</button> 
             </div>
          </section>
          <section class="about-main section">
@@ -103,6 +103,9 @@
          <ul class="about-img-list list">
             <li class="about-img-item">
                <img class="about-img-list-img" src="./images/about/about-img-3.jpg" alt="набирает текст на клавиатуре" width="370" height="294">
+               <label class="label-box">
+               <p class="label-text">Десктопные приложения</p>
+               </label>
             </li>
             <li class="about-img-item">
                <img class="about-img-list-img" src="./images/about/about-img-1.jpg" alt="смотрит в телефон и в ноутбук" width="370" height="294">
@@ -281,43 +284,43 @@
             <ul class="list clients-list">
             <li class="img-item">
                <a class="link link-clients" href="#">
-               <svg class="clients-icon">
-                  <use href="./images/sprite.svg#icon-Union"></use>
+               <svg class="clients-icon" width="106" height="60">
+                  <use href="./images/sprite.svg#icon-Logo"></use>
                </svg>
             </a>
             </li>
             <li class="img-item">
                <a class="link link-clients" href="#">
                <svg class="clients-icon">
-                  <use href="./images/sprite.svg#icon-group-7"></use>
+                  <use href="./images/sprite.svg#icon-Logo1"></use>
                </svg>
                </a>
             </li>
             <li class="img-item">
                <a class="link link-clients" href="#">
                <svg class="clients-icon">
-                  <use href="./images/sprite.svg#icon-Object-3"></use>
+                  <use href="./images/sprite.svg#icon-Logo2"></use>
                </svg>
                </a>
             </li>
             <li class="img-item">
                <a class="link link-clients" href="#">
                <svg class="clients-icon">
-                  <use href="./images/sprite.svg#icon-group-3"></use>
+                  <use href="./images/sprite.svg#icon-Logo3"></use>
                </svg>
                </a>
             </li>
             <li class="img-item">
                <a class="link link-clients" href="#">
                <svg class="clients-icon">
-                  <use href="./images/sprite.svg#icon-group-4"></use>
+                  <use href="./images/sprite.svg#icon-Logo4"></use>
                </svg>
                </a>
             </li>
             <li class="img-item">
                <a class="link link-clients" href="#">
                <svg class="clients-icon">
-                  <use href="./images/sprite.svg#icon-Object-4"></use>
+                  <use href="./images/sprite.svg#icon-Logo5"></use>
                </svg>
                </a>
                </li>
@@ -327,23 +330,7 @@
       </div>
 
       </section>
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
+
    </main>
 
 
@@ -352,7 +339,8 @@
       <!-- FOOTER -->
 
       <footer class="footer">
-         <div class="container">
+         <div class="container footer-container">
+            <div class="footer-left">
          <a class="logo-link link" href="./index.html"><span class="logo-spn">Web</span><span class="logo-spn-one">Studio</span></a> 
          <address class="menu-address">
             <ul class="menu-address-list">
@@ -368,7 +356,69 @@
             </ul>
          </address>
       </div>
+
+      <div class="footer-right">
+         <b class="footer-text">Присоединяйтесь</b>
+         <ul class="footer-list">
+         <li class="social-list-item list">
+            <a href="" class="social-list-link-footer link">
+               <svg class="social-list-icon-footer">
+                  <use href="./images/sprite.svg#icon-instagram"></use>
+               </svg>
+            </a>
+            </li>
+            <li class="social-list-item list">
+               <a href="" class="social-list-link-footer link">
+                  <svg class="social-list-icon-footer">
+                     <use href="./images/sprite.svg#icon-twitter"></use>
+                  </svg>
+               </a>
+            </li>
+            <li class="social-list-item list">
+               <a href="" class="social-list-link-footer link">
+                  <svg class="social-list-icon-footer">
+                     <use href="./images/sprite.svg#icon-facebook"></use>
+                  </svg>
+               </a>
+            </li>
+            <li class="social-list-item list">
+               <a href="" class="social-list-link-footer link">
+                  <svg class="social-list-icon-footer">
+                     <use href="./images/sprite.svg#icon-linkedin"></use>
+                  </svg>
+               </a>
+            </li>
+            
+         </ul>
+      </div>
+   </div>
       </footer>
+      <div class="backdrop is-hidden" data-modal>
+         <div class="modal">
+            <button  type="button" class="modal-close-btn" data-modal-close>
+               <svg class="modal-close-btn-svg">
+                  <use href="./images/sprite.svg#icon-close"></use>
+               </svg>
+            </button>
+            <form action="#" class="modal-form">
+               <p class="modal-form-head"></p>
+               <label class="modal-form-field">
+                  Имя
+                  <input type="text" class="modal-form-input">
+               </label>
+               <label class="modal-form-field">
+                  Телефон
+                  <input type="tel" class="modal-form-input">
+               </label>
+               <label class="modal-form-field">
+                  Почта
+                  <input type="mail" class="modal-form-input">
+               </label>
+
+            </form>
+         </div>
+      </div>
+      <script src="./js/modal.js"></script>
 
    </body>
 </html>
