@@ -1,0 +1,15 @@
+.menu-mobile {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.burger-btn__icon {
+  height: 40px;
+  width: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-mobile {
+    display: none;
+  }
+}
